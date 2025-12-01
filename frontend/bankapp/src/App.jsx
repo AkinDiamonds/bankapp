@@ -58,7 +58,7 @@ export default function App() {
     setExplanation("");
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/explain", {
+      const response = await fetch("https://bankapp1.onrender.com/explain", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(tx),
