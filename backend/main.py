@@ -29,3 +29,8 @@ async def explain_transaction(tx: Transaction):
         contents=prompt
     )
     return {"explanation": response.text}
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
